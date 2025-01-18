@@ -1,0 +1,59 @@
+#myoder-container{
+    background: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.order-card{
+    width: 100%;
+    border: 2px ridge #240b00;
+    padding: 5px;
+    display: flex; 
+    flex-direction: column;
+    font-size: 12px;
+    gap: 10px;
+}
+
+.order-card section{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.order-card .section1{
+    justify-content: start;
+    font-weight: 600;
+}
+
+.order-card .section1 img{
+    width: 40px;
+}
+
+@media screen and (min-width : 676px) {
+    .order-card{ font-size: 13px; }
+}
+
+@media screen and (min-width : 926px) {
+    .order-card{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1.5fr .75fr 1fr;
+        gap: 10px;
+        align-items: center;
+        font-size: 14px;
+    }
+    .order-card section{
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+    
+    .order-card .section1{
+        justify-content: start;
+    }
+    
+    .order-card .section1 img{
+        width: 50px;
+    }
+}

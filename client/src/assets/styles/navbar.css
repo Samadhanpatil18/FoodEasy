@@ -1,0 +1,247 @@
+:root{
+    --light-orange : #ffa45e;
+    --app-orange : #ff7e2e;
+    --app-brown : #501e03;
+    --light-brown : #592a00;
+    --dark-brown : #2f180b;
+    --white : #ffffff;
+    --black : #000000;
+    --app-blue : #00b3ff;
+    --dark-blue : #011721;
+    --mid-blue : #004666;
+    --light-blue : #74d1fc;
+}
+
+#navbar-container{
+    z-index: 10;
+    background: url(../images/hero-bg.png);
+    background-size: cover;
+}
+
+#nav-logo{
+    min-width: 80px;
+}
+
+.profile-wrapper{
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+}
+
+#nav-logo img{
+    filter: drop-shadow(0px 0px 1px var(--light-orange));
+}
+
+#nav-links a{
+    padding: 2px 8px;
+    transition: all .15s linear;
+}
+#nav-links a.active{
+    color: var(--app-orange);
+}
+#nav-links a:hover{
+    color: var(--app-orange);
+}
+
+#other-links :is(a,button){
+    padding: 2px 8px;
+    border-radius: 50%;
+    transition: all .15s linear;
+    font-size: 1.5rem;
+}
+#other-links :is(a,button):hover{
+    background-color: var(--app-orange);
+    color: white;
+}
+#other-links button#login-btn{
+    border-radius: .5rem;
+    padding: 2px 16px;
+    background-color: var(--app-orange);
+    font-size: 1rem;
+}
+
+#other-links button#login-btn:hover{
+    background-color: var(--app-brown);
+    color: white;
+}
+
+#nav-login-div :is(a,button){
+    padding: 6px 10px;
+    background-color: var(--app-brown);
+    border-radius: 50%;
+    font-size: 1rem;
+}
+
+#nav-login-div :is(a,button):hover{
+    background-color: var(--app-orange);
+    color: white;
+}
+
+#nav-login-div .profile-div .profile-dropdown button{
+    background-color: var(--white);
+}
+
+#burger-menu button{
+    border-radius: 50%;
+    padding: 8px;
+    display: grid;
+    place-items: center;
+    color: var(--app-brown);
+    transition: all .15s linear;
+}
+#burger-menu button:hover{
+    background-color:var(--app-orange);
+}
+
+#scroll-menu{
+    transform-origin: right;
+    background: var(--app-orange);
+    background: linear-gradient(135deg, var(--app-orange), var(--app-brown));
+    transform: rotateY(90deg);
+    transition: all .35s ease-in-out;
+    z-index: 30;
+}
+#scroll-menu.visible{
+    transform: rotateY(0);
+}
+
+#scroll-menu-links a{
+    padding: .5rem 4rem;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: all .15s linear;
+}
+#scroll-menu-links a:hover{
+    background-color: var(--app-brown);
+}
+#scroll-menu-links a i{
+    margin-left: 1rem;
+}
+
+/* login tab */
+#login-tab{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000000b6;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 25;
+}
+
+#login-tab form{
+    width: 260px;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 15px var(--app-brown);
+    padding: 2rem .85rem 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+#login-tab form input{
+    display: block;
+    border: 1px solid var(--app-brown);
+    outline: none;
+    color: var(--app-brown);
+}
+
+#login-tab .form-scroll{
+    display: flex;
+    transition: transform .5s ease-in-out ;
+}
+
+#login-tab .form-scroll .form-wrapper{
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+/* footer */
+#footer-container{
+    min-height: 50vh;
+    background-color: var(--dark-brown);
+    font-size: 14px;
+}
+
+#footer-container .wrapper section{
+    min-width: 250px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#footer-container #footer-company a{
+    padding: 2px;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+
+#footer-container address{
+    margin-bottom: 1rem;
+}
+
+#footer-container #footer-company a:hover{
+    color: var(--light-orange);
+}
+
+#footer-container .copyright{
+    border-top: 1px solid var(--white);
+}
+
+#login-tab .inp-check:focus:valid{
+    box-shadow: 0px 0px 5px var(--light-blue);
+}
+
+#login-tab .inp-check:focus:invalid{
+    box-shadow: 0px 0px 5px var(--light-orange);
+}
+
+#navbar-container .profile-div{
+    height: 100%;
+}
+
+#navbar-container .profile-div .profile-dropdown{
+    position: absolute;
+    top: 150%;
+    right: 0%;
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 5px;
+    width: max-content;
+    z-index: 11;
+}
+
+#navbar-container .profile-div .profile-dropdown .options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#navbar-container .profile-div .profile-dropdown .options button{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 0px;
+} 
+#navbar-container .profile-div .profile-dropdown .options button:hover{
+    background-color: var(--app-brown);
+    color: var(--white);
+}
+
+
+@media screen and (min-width : 676px) {
+    #login-tab form{
+        width: 325px;
+        padding: 2rem 1rem 2rem;
+    }
+    #footer-container{
+        font-size: 16px;
+    }
+}

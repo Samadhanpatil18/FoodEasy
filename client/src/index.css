@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('./assets/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'RubikWetPaint';
+  src: url('./assets/fonts/RubikWetPaint-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+
+:root{
+  --light-orange : #ffa45e;
+  --app-orange : #ff7e2e;
+  --app-brown : #501e03;
+  --light-brown : #592a00;
+  --white : #ffffff;
+  --black : #000000;
+  --app-blue : #00b3ff;
+  --dark-blue : #011721;
+  --mid-blue : #004666;
+  --light-blue : #74d1fc;
+}
+
+body{
+  overflow-x: hidden;
+  padding-top: 64px;
+  width : 100vw;
+  scrollbar-base-color: #888;
+  scrollbar-track-color: #f1f1f1;
+  scrollbar-face-color: #888;
+  scrollbar-width: thin;
+  font-family: 'Ubuntu';
+}
+
+#root{
+  width : 100%;
+}
+
+.particle-bg{
+  background: url(../images/hero-bg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.rubik-font{
+  font-family: 'RubikWetPaint';
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+*::selection{
+  background-color: #ff7e2e;
+  color: black;
+}
+
+.screen-max-width{
+  width: 100vw;
+  min-height: 90vh;
+  padding: 1.5rem .5rem;
+  padding-bottom: 2rem;
+}
+
+/* For the whole page */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+/* Track (Background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Color of the scrollbar track */
+}
+
+/* Handle (Scroll thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #a0a0a0; /* Color of the scrollbar handle */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6c6c6c; /* Darker color when hovered */
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+
+  .nav-height {
+    @apply h-[calc(100vh-60px)]
+  }
+
+  .btn {
+    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue
+  }
+
+  .color-container {
+    @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur
+  }
+
+  .size-btn-container {
+    @apply flex items-center justify-center p-1 rounded-full bg-gray-300 backdrop-blur ml-3 gap-1
+  }
+
+  .size-btn {
+    @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black rounded-full transition-all
+  }
+
+  .common-padding {
+    @apply sm:py-32 py-20 sm:px-10 px-5
+  }
+
+  .section-heading {
+    @apply text-gray lg:text-6xl md:text-5xl text-3xl lg:mb-0 mb-5 font-medium opacity-0 translate-y-[-20px]
+  }
+
+  .feature-text {
+    @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px]
+  }
+
+  .feature-text-container {
+    @apply w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5
+  }
+
+  .feature-video {
+    @apply w-full h-full object-cover object-center scale-150 opacity-0
+  }
+
+  .feature-video-container {
+    @apply w-full flex flex-col md:flex-row gap-5 items-center
+  }
+
+  .link {
+    @apply text-blue-200 hover:underline cursor-pointer flex items-center text-xl opacity-0 translate-y-20
+  }
+
+  .control-btn {
+    @apply ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex-center
+  }
+
+  .hero-title {
+    @apply text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10
+  }
+
+  .hiw-title {
+    @apply text-4xl md:text-7xl font-semibold text-center
+  }
+
+  .hiw-subtitle {
+    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center
+  }
+
+  .hiw-video {
+    @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden
+  }
+
+  .hiw-text-container {
+    @apply flex md:flex-row flex-col justify-between items-start gap-24
+  }
+
+  .hiw-text {
+    @apply text-gray text-xl font-normal md:font-semibold
+  }
+
+  .hiw-bigtext {
+    @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2
+  }
+
+  .video-carousel-container {
+    @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
+  }
+
+  .g_fadeIn {
+    @apply opacity-0 translate-y-[100px]
+  }
+}

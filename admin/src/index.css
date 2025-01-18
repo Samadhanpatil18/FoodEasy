@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Ubuntu";
+    src: url(./assets/fonts/Ubuntu-Regular.ttf) format('truetype');
+}
+
+.screen-max-width{
+    width: 100vw;
+    min-height: 95vh;
+}
+
+.screen-container{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+body{
+    overflow-x: hidden;
+    scrollbar-base-color: #888;
+    scrollbar-track-color: #f1f1f1;
+    scrollbar-face-color: #888;
+    scrollbar-width: thin;
+    font-family: 'Ubuntu';
+    font-family: 'Ubuntu';
+}
+
+#root{
+    width: 100%;
+    position: relative;
+    padding-top: 125px;
+    margin-bottom: 100px;
+}
+
+/* For the whole page */
+::-webkit-scrollbar {
+    width: 8px; /* Width of the vertical scrollbar */
+    height: 8px; /* Height of the horizontal scrollbar */
+  }
+  
+  /* Track (Background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Color of the scrollbar track */
+  }
+  
+  /* Handle (Scroll thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #a0a0a0; /* Color of the scrollbar handle */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #6c6c6c; /* Darker color when hovered */
+  }
+
+@media screen and (min-width : 640px) {
+    #root{
+        padding-left: 210px;
+    }
+    .screen-container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media screen and (min-width : 1024px) {
+    #root{
+        padding-left: 290px;
+    }
+    .screen-container{
+        padding-left: 58px;
+        padding-right: 58px;
+    }
+}
+@media screen and (min-width : 1280px) {
+    .screen-container{
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+}

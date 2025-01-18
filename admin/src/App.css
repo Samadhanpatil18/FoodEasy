@@ -1,0 +1,132 @@
+:root{
+    --light-orange : #ffa45e;
+    --app-orange : #ff7e2e;
+    --app-brown : #501e03;
+    --dark-brown : #321200;
+    --light-brown : #592a00;
+    --white : #ffffff;
+    --black : #000000;
+    --app-blue : #00b3ff;
+    --dark-blue : #011721;
+    --mid-blue : #004666;
+    --light-blue : #74d1fc;
+}
+
+header{
+    background-color: var(--dark-brown);
+}
+
+.menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px 10px;
+}
+
+.food-card{
+    padding: 5px;
+    border: 1px solid var(--dark-brown);
+    font-size: 12px;
+}
+
+.food-card img{
+    aspect-ratio: 8/5;
+    object-fit: cover;
+    object-position: center;
+}
+
+.additem-container{
+    display: grid;
+    place-items: center;
+}
+
+.additem-container form{
+    max-width: 500px;
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.additem-container input{
+    border: 1px solid var(--dark-brown);
+    color: var(--app-brown);
+    outline: none;
+    width: 100%;
+    padding: 2px 5px;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.additem-container form :is(#spiciness_level,#tag){
+    background-color: var(--app-orange);
+    color: var(--white);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 5px;
+    outline: none;
+}
+
+nav ul .nav-items.active{
+    color: var(--app-orange);
+}
+
+.order-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-card{
+    border: 2px solid var(--dark-brown);
+    display: grid;
+    grid-template-columns: .5fr 1.25fr 1.5fr .5fr;
+    padding: 10px 5px;
+    gap: 5px;
+    font-size: 9px;
+}
+
+.order-card select{
+    align-self: center;
+    padding: 2px;
+    background-color: var(--mid-blue);
+    color: var(--white);
+    font-weight: 600;
+    outline: none;
+    border-radius: 2px;
+}
+
+@media screen and (min-width : 640px) {
+    nav ul .nav-items{
+        padding: 5px;
+        text-align: center;
+        border: 1px solid var(--dark-blue);
+        color: #004666;
+        width: 100%;
+        border-radius: 5px;
+    }
+    nav ul .nav-items.active{
+        color: var(--app-orange);
+        border: 1px solid var(--dark-brown);
+    }
+    .additem-container form{
+        font-size: 16px;
+    }
+    .order-card{
+        grid-template-columns: 0.4fr 1fr 1fr 0.5fr;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    
+    .order-card select{
+       max-width: 200px; 
+    }
+}
+
+@media screen and (min-width : 786px) {
+    .order-card{
+        grid-template-columns: 0.3fr 1fr 1fr 0.5fr;
+        gap: 15px; 
+        font-size: 12px;
+    }
+}

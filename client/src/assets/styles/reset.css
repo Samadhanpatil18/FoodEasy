@@ -1,0 +1,90 @@
+:root{
+    --light-orange : #ffa45e;
+    --app-orange : #ff7e2e;
+    --app-brown : #501e03;
+    --light-brown : #592a00;
+    --white : #ffffff;
+    --black : #000000;
+    --app-blue : #00b3ff;
+    --dark-blue : #011721;
+    --mid-blue : #004666;
+    --light-blue : #74d1fc;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#forgot-container,#reset-psw-container{
+    background: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#forgot-container .wrapper{
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 5px 10px grey;
+    border: 2px solid #d0d0d0;
+}
+
+#email{
+    background-color: var();
+    outline: none;
+    border-radius: 1px;
+    box-shadow: 0px 0px 2px var(--app-brown);
+}
+
+#email:focus:valid{
+    border: 1px solid var(--);
+}
+
+.otp-div{
+    width: 100%;
+    display: flex;
+    padding: 10px 0px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.otp-div input{
+    box-shadow: 0px 0px 2px var(--mid-blue);
+    letter-spacing: 5px;
+    width: 150px;
+    padding: 2px 5px;
+    text-align: center;
+    outline: none;
+}
+
+.otp-div input:focus{
+    background-color: var(--light-blue);
+}
+
+.otp-div button{
+    padding: 2px 10px;
+    background-color: var(--dark-blue);
+    border-radius: 5px;
+    color: var(--white);
+}
+
+.reset-psw-container .wrapper{
+    max-width: 450px;
+    border: 3px dotted var(--dark-blue);
+} 
+
+.reset-psw-container .wrapper input{
+    box-shadow: 0px 0px 2px var(--app-brown);
+    outline: none;
+    width: 100%;
+}

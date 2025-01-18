@@ -1,0 +1,137 @@
+:root{
+    --light-orange : #ffa45e;
+    --app-orange : #ff7e2e;
+    --app-brown : #501e03;
+    --light-brown : #592a00;
+    --white : #ffffff;
+    --black : #000000;
+    --app-blue : #00b3ff;
+    --dark-blue : #011721;
+    --mid-blue : #004666;
+    --light-blue : #74d1fc;
+}
+
+#hero-container{
+    background: url(../images/hero-bg.png);
+    background-size: cover;
+}
+
+#hero-container .left .content{
+    max-width: 450px;
+    z-index: 9;
+    font-family: 'JosefinSans';
+}
+
+#hero-dish{
+    z-index: 2;
+    width: 250px;
+    transform: rotateZ(-10deg) translateX(-50%);
+    left: 50%;
+    user-select: none;
+}
+
+#hero-brush{
+    z-index: 1;
+    bottom: 0%;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 550px;
+    opacity: .8;
+    user-select: none;
+}
+
+#topdishes-container{
+    padding-bottom: 3rem;
+}
+
+#topdishes-div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1.5rem 5px;
+}
+
+.topdish-card{
+    width: 130px;
+    aspect-ratio: 6/7;
+    border: 5px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    color: var(--light-brown);
+}
+
+.topdish-card:hover{
+    scale: 1.025;
+    background-color: var(--light-brown);
+    border: 5px solid var(--light-brown);
+    color: var(--white);
+    transition: all .25s ease-in-out;
+}
+
+.topdish-card img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+}
+
+.topdish-card img{
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: center;
+}
+
+#carousel-container{
+    background-color: var(--light-blue);
+}
+
+#food-categories-container{
+    background: url(../images/hero-bg.png);
+    background-size: cover;
+}
+
+#food-categories-container #slideshow-div{ 
+    aspect-ratio: 3/2;
+    max-width: 600px;
+    border-radius: 1rem;
+}
+
+#food-categories-container .cat-circle img{
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media screen and (min-width : 676px) {
+    #topdishes-div{
+        gap: 1.5rem;
+    }
+    #hero-brush{
+        bottom: 10%;
+    }
+    .topdish-card{
+        width: 175px;
+    }
+}
+
+@media screen and (min-width : 1024px) {
+    #hero-brush{
+        bottom: 6%;
+        opacity: .9;
+    }
+    #hero-dish{
+        width: 350px;
+        bottom: 25%;
+        left: 15%;
+        transform: rotateZ(-10deg);
+    }
+}
+

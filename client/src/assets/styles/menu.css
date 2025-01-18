@@ -1,0 +1,228 @@
+:root{
+    --light-orange : #ffa45e;
+    --mild-orange : #fff3ea;
+    --app-orange : #ff7e2e;
+    --app-brown : #501e03;
+    --light-brown : #6a3100;
+    --white : #ffffff;
+    --black : #000000;
+    --app-blue : #00b3ff;
+    --dark-blue : #011721;
+    --mid-blue : #004666;
+    --light-blue : #74d1fc;
+}
+
+#menu-container .menu-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    column-gap: .35rem;
+    row-gap: 1rem;
+}
+
+.food-card{
+    width: 130px;
+    border: 1px solid rgb(232, 232, 232);
+    padding: 1px;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 5px rgb(199, 199, 199);
+    transition: all .35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.food-card:hover{
+    scale: 1.025;
+}
+
+.food-card img{
+    border-radius: .5rem;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+}
+
+.food-card input[type = 'number']{
+    width: fit-content;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.food-card .cart-counter{
+    position: absolute;
+    bottom: 1px;
+    right: 5px;
+}
+
+.food-card .cuttern{
+    color: var(--app-orange);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-weight: 600;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.food-card .cart-counter input{
+    border-radius: 50%;
+    width: 15px;
+    height: 18px;
+    font-weight: 700;
+    font-size: .85rem;
+    background-color: var(--white);
+    color: var(--app-brown);
+    order: 2;
+}
+
+.food-card .cart-counter button{
+    width: 15px;
+    height: 18px;
+    border-radius: 50%;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-card .card-des{
+    font-size: 10px;
+    text-align: start;
+    padding: 0px 1px;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-bar input{
+    width: 220px;
+    max-width: 100%;
+    border: 1px solid rgb(184, 184, 184);
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    color: var(--app-brown);
+}
+
+.search-bar input:focus{
+    background-color: var(--mild-orange);
+}
+.search-bar input:focus::placeholder{
+    color: var(--light-brown);
+    opacity: .5;
+}
+
+.search-bar button{
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: var(--app-brown);
+    color: var(--white);
+}
+
+.search-bar button:hover{
+    background-color: var(--light-brown);
+    scale: 1.05;
+}
+
+.filter-container .wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: .5rem;
+    font-size: 12px;
+}
+
+.filter-container .wrapper .filter-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    color: var(--app-brown);
+}
+
+.filter-container .wrapper button{
+    border-radius: 50%;
+    border: 2px solid transparent;
+    padding: 1px;
+}
+
+.filter-container .wrapper button:hover{
+    scale: 1.05;
+    transition: all 0.35 ease-in;
+}
+
+.filter-container .wrapper button.active{
+    border-radius: 50%;
+    border: 2px solid var(--app-blue);
+}
+
+.filter-container .wrapper button img{
+    user-select: none;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+  .rating-part{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    gap: 5px;
+  }
+  
+  .rating{
+    display: flex;
+    justify-content: start;
+    background-clip: text;
+    -moz-background-clip: text;
+    width: max-content;
+    cursor: text;
+    padding: 0%;
+  }
+  
+  .rating i{
+    color: transparent;
+    font-size: 10px;
+  }
+  
+
+@media screen and (min-width : 376px){
+    .search-bar input{
+        width: 275px;
+    }
+}
+
+@media screen and (min-width : 676px) {
+    .food-card{
+        padding: 5px;
+    }
+    #menu-container .menu-wrapper{
+        column-gap: 1.75rem;
+        row-gap: 2.5rem;
+    }
+    .food-card .cart-counter :is(input,button){
+        width: 22px;
+        height: 25px;
+        font-size: 1rem;
+    }
+    .search-bar input{
+        width: 500px;
+    }
+    .filter-container .wrapper button img{
+        width: 75px;
+    }
+    .filter-container .wrapper{
+        font-size: 13px;
+    }
+    .food-card .card-des{
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,53 @@
+:root{
+    --light-orange : #ffa45e;
+    --app-orange : #ff7e2e;
+    --app-brown : #501e03;
+    --light-brown : #592a00;
+    --white : #ffffff;
+    --black : #000000;
+    --app-blue : #00b3ff;
+    --dark-blue : #011721;
+    --mid-blue : #004666;
+    --light-blue : #74d1fc;
+}
+
+.founder-img img{
+    width: 150px;
+    object-fit: cover;
+    object-position: center;
+    border: 5px solid var(--app-orange);
+    outline: 5px solid var(--app-brown);
+    box-shadow: 1px 1px 20px var(--app-brown);
+}
+
+#experts-container .expert-card{
+    border: 5px solid white;
+    box-shadow: 1px 1px 16px var(--app-brown);
+    background-color: var(--app-orange);
+    padding: 5px;
+    border-radius: .5rem;
+    color: white;
+    text-align: center;
+}
+
+#experts-container{
+    background: url(../images/hero-bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#experts-container .expert-card img{
+    border-radius: .5rem;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    object-position: 25% 25%;
+}
+
+@media screen and (min-width : 676px) {
+    #hero-container .wrapper{
+        max-width: 525px;
+    }
+    .founder-img img{
+        width: 200px;
+    }
+}
