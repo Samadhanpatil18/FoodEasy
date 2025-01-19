@@ -8,7 +8,7 @@ export const StoreContext = createContext(null)
 
 function StoredContext(props) {
   
-  const backendUrl = "http://localhost:8000";
+  const backendUrl = "https://foodeasy-backend.onrender.com";
   const [foodItems, setFoodItems] = useState([]);
   const [orders, setOrders] = useState([]);
   const [activeLink, setActiveLink] = useState('');
