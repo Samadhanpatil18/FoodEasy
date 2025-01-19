@@ -8,7 +8,7 @@ export const StoreContext = createContext(null);
 
 export default function StoredContextProvider(props) {
 
-  const backendUrl = "http://localhost:8000";
+  const backendUrl = "https://foodeasy-backend.onrender.com";
   const [activeLink, setActiveLink] = useState('home');
   const [loginTab, setLoginTab]  =  useState(false);
   const [menuData, setMenuData] = useState([]);
